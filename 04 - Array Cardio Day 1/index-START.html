@@ -71,6 +71,18 @@
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
+    // go through each inventor
+    // take passed year and birth year and get the difference to get years lived
+    // add to sumAllInventorsLivedYears variable
+    // return that variable
+    function getInventorLivingYears(inventor) {
+      return inventor.passed - inventor.year;
+    }
+    let sumAllInventorsLivingYears = inventors.reduce((sum, inventor) => {
+      return sum + getInventorLivingYears(inventor);
+    }, 0);
+
+    console.log(`Sum of All Inventor's Living Years: ${sumAllInventorsLivingYears}!`);
 
     // 5. Sort the inventors by years lived
 
