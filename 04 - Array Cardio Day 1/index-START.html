@@ -105,6 +105,22 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    // first, save each person as personA and personB, respectively
+    // get person's last name with splitting the string via comma, and index at 0 for the last name
+    // if person A's last name < person B's last name, return -1 (meaning A should be before B)
+    // if A > B, return 1 (meaning A should be after B)
+    // else equal (same last name)
+    console.table(people.sort((personA, personB) => {
+      const personALastName = personA.split(',')[0];
+      const personBLastName = personB.split(',')[0];
+      if (personALastName < personBLastName) {
+        return -1;
+      } else if (personALastName > personALastName) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }));
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
