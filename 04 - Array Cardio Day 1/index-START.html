@@ -85,6 +85,19 @@
     console.log(`Sum of All Inventor's Living Years: ${sumAllInventorsLivingYears}!`);
 
     // 5. Sort the inventors by years lived
+    // first call sort and in the custom sort algorithm, get inventor A's living years and get inventor B's living years
+    // then, if inventor A's living years greater than inventor B's, return -1 (negative meaning A should be before B)
+    // if A less than B, return 1 (positive meaning A should be after B)
+    // if equal, return 0 (equal meaning no swap)
+    console.table(inventors.sort((inventorA, inventorB) => {
+      if (getInventorLivingYears(inventorA) > getInventorLivingYears(inventorB)) {
+        return -1;
+      } else if (getInventorLivingYears(inventorA) < getInventorLivingYears(inventorB)) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }));
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
