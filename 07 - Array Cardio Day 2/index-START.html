@@ -27,6 +27,14 @@
 
     // Some and Every Checks
     // Array.prototype.some() // is at least one person 19 or older?
+    // get person's birth year and current year and get the difference
+    // if difference is 19 or more, return true
+    // else false
+    function isPersonOlderThan19(person) {
+      return (new Date().getFullYear() - person.year) >= 19;
+    }
+    console.log(people.some(isPersonOlderThan19));
+
     // Array.prototype.every() // is everyone 19 or older?
 
     // Array.prototype.find()
