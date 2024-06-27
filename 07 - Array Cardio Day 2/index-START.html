@@ -49,6 +49,13 @@
     // Array.prototype.findIndex()
     // Find the comment with this ID
     // delete the comment with the ID of 823423
+    // go through every comment object and get their id and if the id matches, return true
+    // with the index, splice to remove
+    const indexOfComment = comments.findIndex((comment) => {
+      if (comment.id === 823423) return true;
+    });
+    comments.splice(indexOfComment, 1);
+    console.log(comments);
 
   </script>
 </body>
