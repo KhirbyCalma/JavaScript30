@@ -54,6 +54,20 @@
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+    // if inventor A's birth year is less than inventor B's, return -1 (negative meaning A should be before B) 
+    // if inventor A's birth year is more than inventor B's return 1 (positive meaning A should be after B)
+    // else (A and B equal), return 0 (equal so no swap)
+    function checkOlderInventor(inventorA, inventorB) {
+      if (inventorA.year < inventorB.year) {
+        return -1;
+      } else if (inventorA > inventorB.year) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+    console.table(inventors.sort(checkOlderInventor));
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
